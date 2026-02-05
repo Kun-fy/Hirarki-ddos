@@ -149,7 +149,7 @@ def create_connection(target: ParseResult, proxy: Optional[ProxyTuple], proxy_ty
     use_ssl = target.scheme == 'https'
     try:
         if proxy is None:
-            sock = socket.create_connection((target_host, target_port), timeout=CONNECT_TIMEOUT)
+            sock = socket.create_connection((target_host, target_port), timeout=connect_timeout)
         elif proxy_type in ['socks4', 'socks5']:
             sock = socks.socksocket(socket.AF_INET, socket.SOCK_STREAM)
             sock.set_proxy(
@@ -160,7 +160,7 @@ def create_connection(target: ParseResult, proxy: Optional[ProxyTuple], proxy_ty
             sock.settimeout(CONNECT_TIMEOUT)
             sock.connect((target_host, target_port))
         elif proxy_type in ['http', 'https']:
-            sock = socket.create_connection((proxy.host, proxy.port), timeout=CONNECT_TIMEOUT)
+            sock = socket.create_connection((proxy.host, proxy.port), timeout=connect_timeout)
             if use_ssl:
                 connect_str = f"CONNECT {target_host}:{target_port} HTTP/1.1\r\n"
                 connect_str += f"Host: {target_host}:{target_port}\r\n\r\n"
