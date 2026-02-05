@@ -108,11 +108,11 @@ class ThreadGroupProxyManager:
 
 class ResourceManager:
     _user_agents: List[str] = []
-    _accept_headers: List[str] = DEFAULT_ACCEPT_HEADERS
+    _accept_headers: List[str] = default_accept_headers
     _loaded = False
     _lock = threading.Lock()
 
-    def __init__(self, user_agents_file: str = DEFAULT_USER_AGENTS_FILE):
+    def __init__(self, user_agents_file: str = default_user_agents_file):
         if not ResourceManager._loaded:
             with ResourceManager._lock:
                 if not ResourceManager._loaded:
