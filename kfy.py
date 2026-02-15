@@ -356,13 +356,13 @@ class ThreadedFlooder:
                  error_rate = (current_errors/current_req_count * 100) if current_req_count > 0 else 0
                  mb_sent = current_bytes/(1024 * 1024)
                  mbps = (mb_sent * 8)/elapsed_total if elapsed_total > 0 else 0
-                 logger.info(
-                    f"\033[38;5;220mStats: Time={elapsed_total:.1f}s |Req={current_req_count}|")
-                    f"\033[38;5;206mSuccess={current_success}({success_rate:.1f}%)|")
-                    f"\033[32mErrors={current_errors}({error_rate:.1f}%)[ConnErrs={current_conn_err}]|")
-                    f"\033[37mRPS={rps_interval:.2f} (avg: {rps_total:.2f})|")
-                    f"\033[38;5;37mSent={mb_sent:.2f} MB ({mbps:.2f} Mbps)")
-                 )
+                 logger.info:
+                    print(f"\033[38;5;220mStats: Time={elapsed_total:.1f}s |Req={current_req_count}|")
+                    print(f"\033[38;5;206mSuccess={current_success}({success_rate:.1f}%)|")
+                    print(f"\033[32mErrors={current_errors}({error_rate:.1f}%)[ConnErrs={current_conn_err}]|")
+                    print(f"\033[37mRPS={rps_interval:.2f} (avg: {rps_total:.2f})|")
+                    print(f"\033[38;5;37mSent={mb_sent:.2f} MB ({mbps:.2f} Mbps)")
+                 
                  last_req_count = current_req_count
                  last_time = now
             except Exception as e:
