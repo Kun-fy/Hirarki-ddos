@@ -350,17 +350,17 @@ class ThreadedFlooder:
                      current_bytes = self.bytes_sent
 
                  interval_req_count = current_req_count - last_req_count
-                 rps_interval = interval_req_count / elapsed_interval if elapsed_interval > 0 else 0
-                 rps_total = current_req_count / elapsed_total if elapsed_total > 0 else 0
-                 success_rate = (current_success / current_req_count * 100) if current_req_count > 0 else 0
-                 error_rate = (current_errors / current_req_count * 100) if current_req_count > 0 else 0
-                 mb_sent = current_bytes / (1024 * 1024)
-                 mbps = (mb_sent * 8) / elapsed_total if elapsed_total > 0 else 0
+                 rps_interval = interval_req_count/elapsed_interval if elapsed_interval > 0 else 0
+                 rps_total = current_req_count/elapsed_total if elapsed_total > 0 else 0
+                 success_rate = (current_success/current_req_count * 100) if current_req_count > 0 else 0
+                 error_rate = (current_errors/current_req_count * 100) if current_req_count > 0 else 0
+                 mb_sent = current_bytes/(1024 * 1024)
+                 mbps = (mb_sent * 8)/elapsed_total if elapsed_total > 0 else 0
                  logger.info(
-                    f"Stats: Time={elapsed_total:.1f}s | Req={current_req_count} | "
-                    f"Success={current_success} ({success_rate:.1f}%) | "
-                    f"Errors={current_errors} ({error_rate:.1f}%) [ConnErrs={current_conn_err}] | "
-                    f"RPS={rps_interval:.2f} (avg: {rps_total:.2f}) | "
+                    f"Stats: Time={elapsed_total:.1f}s |Req={current_req_count}|"
+                    f"Success={current_success} ({success_rate:.1f}%)|"
+                    f"Errors={current_errors} ({error_rate:.1f}%) [ConnErrs={current_conn_err}]|"
+                    f"RPS={rps_interval:.2f} (avg: {rps_total:.2f})|"
                     f"Sent={mb_sent:.2f} MB ({mbps:.2f} Mbps)"
                  )
                  last_req_count = current_req_count
