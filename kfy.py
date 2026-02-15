@@ -360,7 +360,7 @@ class ThreadedFlooder:
                  logger.info(
                     f"\033[38;5;220mStats: Time={elapsed_total:.1f}s \033[37mReq={current_req_count}\033[0m")
                  logger.info(
-                    f"\033[38;5;206mSuccess={current_success} \033[37m{success_rate:.1f}% \033[0m")
+                    f"\033[38;5;39mSuccess={current_success} \033[37m{success_rate:.1f}% \033[0m")
                  logger.info(
                     f"\033[32mErrors={current_errors}{error_rate:.1f}% \033[37mConnErrs={current_conn_err}\033[0m")
                  logger.info(
