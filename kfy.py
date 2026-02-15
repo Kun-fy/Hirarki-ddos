@@ -357,7 +357,7 @@ class ThreadedFlooder:
                  mb_sent = current_bytes/(1024 * 1024)
                  mbps = (mb_sent * 8)/elapsed_total if elapsed_total > 0 else 0
                  logger.info(
-                    f"\033[38;5;220mStats: Time={elapsed_total:.1f}s |Req={current_req_count}|\033[0m"
+                    f"\033[38;5;220mStats:Time={elapsed_total:.1f}s|Req={current_req_count}|\033[0m"
                     f"Success={current_success} ({success_rate:.1f}%)|"
                     f"Errors={current_errors} ({error_rate:.1f}%) [ConnErrs={current_conn_err}]|"
                     f"RPS={rps_interval:.2f} (avg: {rps_total:.2f})|"
@@ -438,7 +438,7 @@ class ThreadedFlooder:
         print(f"Target URL:          {self.target_url}")
         print(f"Total Runtime:       {runtime:.2f} seconds")
         print(f"Total Req Attempts:  {final_req_count}")
-        print(f"Successful Requests: {final_success} ({success_rate:.1f}%)")
+        print(f"\033[38;5;206mSuccessful Requests: {final_success} ({success_rate:.1f}%)\033[0m")
         print(f"Failed Requests:     {final_errors} ({error_rate:.1f}%)")
         print(f"Connection Errors:   {final_conn_err}")
         print(f"Requests Per Second: {rps:.2f} (Average)")
