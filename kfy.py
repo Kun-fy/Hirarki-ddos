@@ -360,13 +360,13 @@ class ThreadedFlooder:
                  logger.info(
                     f"\033[38;5;220mStats: Time={elapsed_total:.1f}s \033[37mReq={current_req_count}\033[0m")
                  logger.info(
-                    f"\033[38;5;206mSuccess={current_success} \033[37m({success_rate:.1f}%)\033[0m")
+                    f"\033[38;5;206mSuccess={current_success} \033[37m{success_rate:.1f}% \033[0m")
                  logger.info(
-                    f"\033[32mErrors={current_errors}({error_rate:.1f}%) \033[37mConnErrs={current_conn_err}\033[0m")
+                    f"\033[32mErrors={current_errors}{error_rate:.1f}% \033[37mConnErrs={current_conn_err}\033[0m")
                  logger.info(
-                    f"\033[37mRPS={rps_interval:.2f} \033[37m(avg: {rps_total:.2f})\033[0m")
+                    f"\033[37mRPS={rps_interval:.2f} \033[37mavg: {rps_total:.2f}\033[0m")
                  logger.info(
-                    f"\033[38;5;37mSent={mb_sent:.2f} MB \033[37m({mbps:.2f} Mbps)\033[0m")
+                    f"\033[38;5;37mSent={mb_sent:.2f} MB \033[37m{mbps:.2f} Mbps\033[0m")
                  
                  last_req_count = current_req_count
                  last_time = now
