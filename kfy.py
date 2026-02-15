@@ -359,7 +359,7 @@ class ThreadedFlooder:
                  logger.info(
                     f"\033[38;5;220mStats:Time={elapsed_total:.1f}s|Req={current_req_count}|\033[0m"
                     f"\033[38;5;206mSuccess={current_success}({success_rate:.1f}%)|\033[0m"
-                    f"Errors={current_errors} ({error_rate:.1f}%) [ConnErrs={current_conn_err}]|"
+                    f"\033[31mErrors={current_errors}({error_rate:.1f}%)[ConnErrs={current_conn_err}]|\033[0m"
                     f"RPS={rps_interval:.2f} (avg: {rps_total:.2f})|"
                     f"Sent={mb_sent:.2f} MB ({mbps:.2f} Mbps)"
                  )
