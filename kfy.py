@@ -21,6 +21,17 @@ print("""
 #####
 #####
 """)
+while attemps < 100:
+    username = input("\033[48;5;4m\033[38;5;0mUsername\033[0m: \033[30m")
+    password = input("\033[48;5;4m\033[38;5;0mPassword\033[0m: \033[30m")
+
+    if username == 'kun' and password == 'fayz':
+        print("\033[32m⟩⟩ Hai...! Welcome to zona attack BLACKPHANTER \033[0m")
+        break
+    else:
+        print('Incorrect credentials. Check if you have Caps lock on and try again.')
+        attemps += 1
+        continue
 
 CONNECT_TIMEOUT = 10
 READ_WRITE_TIMEOUT = 15
