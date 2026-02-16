@@ -35,8 +35,8 @@ print("""
 \033[31m│\033[37m▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\033[31m│  
 \033[31m└────────────────────────────────────────────────────────────────────────────┘""")
 while attemps < 100:
-    Silakan masukkan Nama Pengguna = input("\033[48;5;4m\033[38;5;0mNama pengguna\033[0m: \033[30m")
-    Silakan masukkan Kata Sandi = input("\033[48;5;4m\033[38;5;0mKata sandi\033[0m: \033[30m")
+    Silakan masukkan Nama Pengguna = input("\033[48;5;4m\033[38;5;0mUsername\033[0m: \033[30m")
+    Silakan masukkan Kata Sandi = input("\033[48;5;4m\033[38;5;0mPassword\033[0m: \033[30m")
 
     if Nama Pengguna == 'kun' and Kata Sandi == 'fayz':
         print("\033[32m••⟩⟩ Do not use it to attack government websites. \033[0m")
