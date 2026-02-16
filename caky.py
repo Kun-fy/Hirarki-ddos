@@ -38,7 +38,7 @@ while attemps < 100:
     Username = input("\033[48;5;4m\033[38;5;0mSilahkqn masukan nama pengguna\033[0m: \033[30m")
     Password = input("\033[48;5;4m\033[38;5;0mSilahkan masukan kata sandi\033[0m: \033[30m")
 
-    if Nama Pengguna == 'kun' and Kata Sandi == 'fayz':
+    if Username == 'kun' and Password == 'fayz':
         print("\033[32m••⟩⟩ Do not use it to attack government websites. \033[0m")
         break
     else:
